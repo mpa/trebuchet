@@ -1,6 +1,6 @@
 {
   "name": "trebuchet",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A node.js module for throwing email around using the Postmark API.",
   "main": "./lib/index.js",
   "scripts": {
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/thisandagain/trebuchet.git"
+    "url": "http://github.com/mpa/trebuchet.git"
   },
   "keywords": [
     "mail",
     "email",
     "postmark",
-    "mustache",
+    "handlebars",
     "juice",
     "template"
   ],
@@ -25,7 +25,7 @@
   "license": "Apache 2.0",
   "dependencies": {
     "async": "0.1.X",
-    "mu2": "0.5.X",
+    "handlebars": "1.0.X",
     "request": "2.9.X",
     "underscore": "1.3.X",
     "juice": "https://github.com/niftylettuce/juice/tarball/master"
