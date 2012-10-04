@@ -2,7 +2,7 @@
 
 #### Let's chuck some email!
 
-Trebuchet is a node.js module for super simple email transactions using the [Postmark API](http://postmarkapp.com) and [Mustache](http://mustache.github.com/) with [Juice](https://github.com/LearnBoost/juice) for templating. Trebuchet was designed with simple email rendering, batching and API operations in mind.
+Trebuchet is a node.js module for super simple email transactions using the [Postmark API](http://postmarkapp.com) and [Handlebars](https://github.com/wycats/handlebars.js) with [Juice](https://github.com/LearnBoost/juice) for templating. Trebuchet was designed with simple email rendering, batching and API operations in mind.
 
 [![Build Status](https://secure.travis-ci.org/thisandagain/trebuchet.png?branch=master)](http://travis-ci.org/thisandagain/trebuchet)
 
@@ -89,7 +89,7 @@ trebuchet.fire(function (err, response) {
 
 ## Templating
 
-Trebuchet uses [Mustache](http://mustache.github.com/) templates to make sending dynamic HTML and plain-text emails super-duper simple.
+This fork of Trebuchet uses [Handlebars](https://github.com/wycats/handlebars.js) templates to make sending dynamic HTML and plain-text emails super-duper simple.
 
 **NEW**: We've added support [Juice](https://github.com/LearnBoost/juice) which allows one to pass a `css` variable and inline the CSS with the HTML template for email-friendly CSS... KA POW! (thanks to @niftylettuce)
 
