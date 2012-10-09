@@ -65,21 +65,7 @@ async.auto({
         trebuchet.fire(callback);
     }],
 
-    css:    function (callback) {
-        trebuchet.fling({
-            params: {
-                from: argv.from,
-                to: argv.to,
-                subject: 'This is only a test of the fling pattern with inlined CSS'
-            },
-            html: 'test/template/fling.html',
-            css: 'test/template/fling.css',
-            text: 'test/template/fling.html',
-            data: { foo: 'Bar' }
-        }, callback);
-    },
-
-    test:   ['fling', 'fire', 'css', function (callback, obj) {
+    test:   ['fling', 'fire', function (callback, obj) {
         test("Component definition", function (t) {
             t.type(trebuchet, "object", "Component should be an object");
             t.type(trebuchet.fling, "function", "Method should be a function");
@@ -106,13 +92,6 @@ async.auto({
             t.type(obj.fire, "object", "Results should be an object");
             t.equal(obj.fire[0].To, argv.to, "To attributes should match");
             t.equal(obj.fire[0].ErrorCode, 0, "Error code should equal 0");
-            t.end();
-        });
-
-        test("Fling method (CSS)", function (t) {
-            t.type(obj.css, "object", "Results should be an object");
-            t.equal(obj.css.To, argv.to, "To attributes should match");
-            t.equal(obj.css.ErrorCode, 0, "Error code should equal 0");
             t.end();
         });
 
